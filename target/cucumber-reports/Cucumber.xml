@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="25.067215">
-<testcase classname="HepsiBurada Registering" name="Register from the search bar" time="25.067215">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="6.518603">
+<testcase classname="HepsiBurada Registering" name="User registers by successfully completing the registration form" time="6.518603">
 <system-out><![CDATA[Given a web browser is at the Hepsiburada home page.........................passed
 When the user click dropdown................................................passed
 And user clicks on the registration item....................................passed

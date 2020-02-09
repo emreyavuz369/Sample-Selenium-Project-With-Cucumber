@@ -5,18 +5,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
 public class BaseStep {
     public WebDriver driver;
 
-    public BaseStep()
-    {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sevo\\Downloads\\chromedriver_win32\\chromedriver.exe");
+    public BaseStep() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
     }
+
     public enum Pather {
         id,
         className,
@@ -43,22 +40,21 @@ public class BaseStep {
         }
 
     }
-    public void geturl()
-    {
-    driver.get("https://www.hepsiburada.com");
 
+    public void geturl() {
+        driver.get("https://www.hepsiburada.com");
     }
 
     public void waitElement(WebElement element, TimeOut timeOut) {
-
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeOut.value);
             wait.until(ExpectedConditions.invisibilityOf(element));
         } catch (Exception ex) {
-
+            throw new Error(ex.getMessage());
         }
 
     }
+
     public void findElementClick(String path, Pather type) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, TimeOut.MIDDLE.value);
@@ -82,13 +78,14 @@ public class BaseStep {
                     wait.until(ExpectedConditions.elementToBeClickable(By.linkText(path))).click();
                     break;
                 default:
-                    new NotFoundException();
+                    throw new NotFoundException();
             }
-
-        } catch (Exception ex) { }
+        } catch (Exception ex) {
+            throw new Error(ex.getMessage());
+        }
     }
-    public WebElement findElement(String path, Pather type,TimeOut timeOut) {
 
+    public WebElement findElement(String path, Pather type, TimeOut timeOut) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, timeOut.value);
             WebElement element = null;
@@ -112,18 +109,15 @@ public class BaseStep {
                     element = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(path)));
                     break;
                 default:
-                    new NotFoundException();
+                    throw new NotFoundException();
             }
             return element;
-        }
-        catch (Exception ex)
-        {
-            return null;
+        } catch (Exception ex) {
+            throw new Error(ex.getMessage());
         }
     }
 
     public WebElement findElement(String path, Pather type, String description) {
-
         try {
             WebDriverWait wait = new WebDriverWait(driver, TimeOut.MIDDLE.value);
             WebElement element = null;
@@ -147,26 +141,25 @@ public class BaseStep {
                     element = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(path)));
                     break;
                 default:
-                    new NotFoundException();
+                    throw new NotFoundException();
             }
             return element;
         } catch (Exception ex) {
-            System.out.println("find element method error" + ex.getMessage());
-            return null;
+            throw new Error(ex.getMessage());
         }
     }
-
 
     public void PageScrolldown() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,300)", "");
-
     }
 
     public void PageScrollup() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,-300)", "");
     }
+
     public void DriverQuit() {
-        driver.quit(); }
+        driver.quit();
     }
+}

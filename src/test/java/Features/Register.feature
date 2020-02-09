@@ -1,5 +1,6 @@
 Feature: HepsiBurada Registering
-@register
+
+  @register
   Scenario: User registers by successfully completing the registration form
     Given a web browser is at the Hepsiburada home page
     When the user click dropdown

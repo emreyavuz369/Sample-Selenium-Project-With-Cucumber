@@ -18,57 +18,48 @@ public class RegisterStep extends BaseStep {
 
     @When("^the user click dropdown$")
     public void theUserClickDropdown() {
-        findElementClick("myAccount",Pather.id);
-
+        findElementClick("myAccount", Pather.id);
     }
 
     @And("^user clicks on the registration item$")
     public void userClicksOnTheRegistrationItem() {
-        findElementClick("register",Pather.id);
+        findElementClick("register", Pather.id);
     }
 
     @Then("^user sees the registration form$")
     public void userSeesTheRegistrationForm() {
-
-        waitElement(findElement("firstname",Pather.name,""),TimeOut.LOW);
-
+//        waitElement(findElement("firstname", Pather.id, ""), TimeOut.LOW);
     }
 
     @And("^user enters the name$")
     public void userEntersTheName() {
         PageScrolldown();
-        findElement("firstname",Pather.id,"").sendKeys("Sevilay");
-        
+        findElement("firstname", Pather.id, "").sendKeys("Sevilay");
     }
 
     @And("^user enters the surname$")
     public void userEntersTheSurname() {
-        findElement("lastname",Pather.id,"").sendKeys("Test");
-
-
+        findElement("lastname", Pather.id, "").sendKeys("Test");
     }
 
     @And("^user enters the email$")
     public void userEntersTheEmail() {
-        findElement("email-register",Pather.id,"").sendKeys( "x@test.com.tr");
-
+        findElement("email-register", Pather.id, "").sendKeys("x@test.com.tr");
     }
 
     @And("^user enters password$")
     public void userEntersPassword() {
-
-        findElement("password-register",Pather.id,"").sendKeys("1A*"+ uuid);
+        findElement("password-register", Pather.id, "").sendKeys("1A*" + uuid);
     }
 
     @And("^user click the agreement checkbox$")
     public void userClickTheAgreementCheckbox() {
-       findElementClick("form#form-user > div:nth-of-type(5) > div > label",Pather.cssSelector);
+        findElementClick("form#form-user > div:nth-of-type(5) > div > label", Pather.cssSelector);
     }
 
     @And("^user click submit button$")
     public void userClickSubmitButton() {
-        findElementClick("form#form-user > div:nth-of-type(6) > button",Pather.cssSelector);
-
+        findElementClick("form#form-user > div:nth-of-type(6) > button", Pather.cssSelector);
     }
 
     @And("^driver close$")

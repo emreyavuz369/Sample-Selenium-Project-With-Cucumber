@@ -3,19 +3,19 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "Register from the search bar",
+        "line": 4,
+        "name": "User registers by successfully completing the registration form",
         "description": "",
-        "id": "hepsiburada-registering;register-from-the-search-bar",
+        "id": "hepsiburada-registering;user-registers-by-successfully-completing-the-registration-form",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 13595397873,
+              "duration": 3673300287,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
             "name": "a web browser is at the Hepsiburada home page",
             "match": {
               "location": "RegisterStep.aWebBrowserIsAtTheHepsiburadaHomePage()"
@@ -24,10 +24,10 @@
           },
           {
             "result": {
-              "duration": 978230669,
+              "duration": 190774223,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "the user click dropdown",
             "match": {
               "location": "RegisterStep.theUserClickDropdown()"
@@ -36,10 +36,10 @@
           },
           {
             "result": {
-              "duration": 2930374607,
+              "duration": 1910646297,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "user clicks on the registration item",
             "match": {
               "location": "RegisterStep.userClicksOnTheRegistrationItem()"
@@ -48,10 +48,10 @@
           },
           {
             "result": {
-              "duration": 5217083524,
+              "duration": 16244,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "user sees the registration form",
             "match": {
               "location": "RegisterStep.userSeesTheRegistrationForm()"
@@ -60,10 +60,10 @@
           },
           {
             "result": {
-              "duration": 172834252,
+              "duration": 98786916,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "user enters the name",
             "match": {
               "location": "RegisterStep.userEntersTheName()"
@@ -72,10 +72,10 @@
           },
           {
             "result": {
-              "duration": 124559189,
+              "duration": 61511403,
               "status": "passed"
             },
-            "line": 9,
+            "line": 10,
             "name": "user enters the surname",
             "match": {
               "location": "RegisterStep.userEntersTheSurname()"
@@ -84,10 +84,10 @@
           },
           {
             "result": {
-              "duration": 251600988,
+              "duration": 84600900,
               "status": "passed"
             },
-            "line": 10,
+            "line": 11,
             "name": "user enters the email",
             "match": {
               "location": "RegisterStep.userEntersTheEmail()"
@@ -96,10 +96,10 @@
           },
           {
             "result": {
-              "duration": 472673474,
+              "duration": 254874565,
               "status": "passed"
             },
-            "line": 11,
+            "line": 12,
             "name": "user enters password",
             "match": {
               "location": "RegisterStep.userEntersPassword()"
@@ -108,10 +108,10 @@
           },
           {
             "result": {
-              "duration": 134781845,
+              "duration": 74604108,
               "status": "passed"
             },
-            "line": 12,
+            "line": 13,
             "name": "user click the agreement checkbox",
             "match": {
               "location": "RegisterStep.userClickTheAgreementCheckbox()"
@@ -120,10 +120,10 @@
           },
           {
             "result": {
-              "duration": 179946399,
+              "duration": 101441842,
               "status": "passed"
             },
-            "line": 13,
+            "line": 14,
             "name": "user click submit button",
             "match": {
               "location": "RegisterStep.userClickSubmitButton()"
@@ -132,10 +132,10 @@
           },
           {
             "result": {
-              "duration": 1009732413,
+              "duration": 68046161,
               "status": "passed"
             },
-            "line": 14,
+            "line": 15,
             "name": "driver close",
             "match": {
               "location": "RegisterStep.driverClose()"
@@ -145,7 +145,7 @@
         ],
         "tags": [
           {
-            "line": 2,
+            "line": 3,
             "name": "@register"
           }
         ]
